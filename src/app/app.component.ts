@@ -7,10 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'projeto-aluraangular';
-  transferencia: any;
+  transferencias: any[] = [];
 
   public transferir($event: {}): void {
     console.log($event);
-    this.transferencia = $event;
+    const transferencia = {...$event, data: new Date()};
+    this.transferencias.push(transferencia);
   }
 }
