@@ -10,8 +10,4 @@ export class AppComponent {
   title = 'projeto-aluraangular';
 
   constructor(private service: TransferenciaService) {}
-
-  public transferir($event: {}): void {
-    this.service.adicionar($event);
-  }
 }
